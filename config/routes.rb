@@ -1,4 +1,7 @@
 ExceptionLogger::Engine.routes.draw do
+  
+  match '/exception_logger/logged_exceptions/:id' => 'logged_exceptions#show'
+  
   # Exception Logger
   resources :logged_exceptions do
     collection do
